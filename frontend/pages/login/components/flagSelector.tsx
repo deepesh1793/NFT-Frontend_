@@ -26,9 +26,8 @@ const FlagSelector = ({ open, handleOpenChange }: FlagSelectorProps) => {
     <DropdownMenu.Root open={open} onOpenChange={handleOpenChange}>
       <DropdownMenu.Trigger
         asChild
-        className={`border ${
-          open ? "border-b-0 rounded-t-md" : "rounded-md"
-        } border-BorderColorLight dark:border-BorderColor p-1 cursor-pointer`}
+        className={`border ${open ? "border-b-0 rounded-t-md" : "rounded-md"
+          } border-BorderColorLight dark:border-BorderColor p-1 cursor-pointer`}
       >
         {languageOptionTemplate()}
       </DropdownMenu.Trigger>
