@@ -2,7 +2,7 @@
 import { ReactComponent as SunIcon } from "@/assets/svg/files/sun-icon.svg";
 import { ReactComponent as RefreshIcon } from "@/assets/svg/files/refresh-ccw.svg";
 //
-import { Fragment} from "react";
+import { Fragment } from "react";
 import { ThemeHook } from "@hooks/themeHook";
 import { clsx } from "clsx";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";

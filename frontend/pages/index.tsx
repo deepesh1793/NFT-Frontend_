@@ -2,7 +2,7 @@ import { lazy, useEffect } from "react";
 import { Redirect, Router, Switch } from "react-router-dom";
 import Login from "./login";
 
-import { CONTACTS, HOME, LOGIN } from "./paths";
+import {HOME, LOGIN } from "./paths";
 import LayoutComponent from "./components/LayoutComponent";
 import history from "./history";
 import PrivateRoute from "./components/privateRoute";
@@ -11,7 +11,6 @@ import { ThemeHook } from "./hooks/themeHook";
 import Loader from "./components/Loader";
 import { ThemesEnum } from "@/const";
 const Home = lazy(() => import("./home"));
-const Contacts = lazy(() => import("./contacts"));
 
 const SwitchRoute = () => {
   const { authLoading, superAdmin, authenticated } = useAppSelector((state) => state.auth);
@@ -43,13 +42,6 @@ const SwitchRoute = () => {
           <LayoutComponent role={1} history={history}>
             <Switch>
               <PrivateRoute exact path={HOME} authenticated={authenticated} allowByRole={true} Component={Home} />
-              <PrivateRoute
-                exact
-                path={CONTACTS}
-                authenticated={authenticated}
-                allowByRole={true}
-                Component={Contacts}
-              />
               <Redirect to={HOME} />
             </Switch>
           </LayoutComponent>
